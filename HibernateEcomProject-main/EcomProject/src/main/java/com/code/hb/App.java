@@ -26,21 +26,21 @@ public class App {
         // Create Category
         Category category = new Category();
         category.setName("Accessories");
-        category.setDescription("Cases and Headphones");
+        category.setDescription("Charger and Earbuds");
         session.persist(category);
 
         // Create Product
         Product product = new Product();
         product.setName("Smartphone");
-        product.setPrice(new BigDecimal("799.99"));
+        product.setPrice(new BigDecimal("899.99"));
         product.setStockQuantity(15);
         product.setCategory(category);
         session.persist(product);
 
         // Create User
         User user = new User();
-        user.setUsername("bob");
-        user.setPassword("pass123");
+        user.setUsername("ranu");
+        user.setPassword("mypass123");
         user.setEmailId("123@email.com");
         user.setRole(Role.CUSTOMER);
         session.persist(user);
@@ -48,7 +48,7 @@ public class App {
         // Create Order
         Orders order = new Orders();
         order.setOrderDate(new Date(0));
-        order.setTotalAmount(1599.98);
+        order.setTotalAmount(999.99);
         order.setUser(user);
         session.persist(order);
 
@@ -57,7 +57,7 @@ public class App {
         details1.setOrders(order);
         details1.setProduct(product);
         details1.setQuantity(2);
-        details1.setUnitPrice(new BigDecimal("799.99"));
+        details1.setUnitPrice(new BigDecimal("899.99"));
         session.persist(details1);
 
         session.getTransaction().commit();
