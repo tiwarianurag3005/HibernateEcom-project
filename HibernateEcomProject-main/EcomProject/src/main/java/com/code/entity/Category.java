@@ -27,8 +27,8 @@ public class Category {
 	@Column(name="description",length=50,nullable = false)
 	private String description;
 	 //One-to-Many Relationship with Product
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
-    private List<Product> products;
+    //@OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    //private List<Product> products;
 	
 	public Category(){
 		this.id=0;
@@ -70,9 +70,9 @@ public class Category {
 		return products;
 	}
 
-	public void setProducts(List<Product> products) {
-		this.products = products;
-	}
+	//public void setProducts(List<Product> products) {
+	//	this.products = products;
+	//}
 
 	@Override
 	public String toString() {
